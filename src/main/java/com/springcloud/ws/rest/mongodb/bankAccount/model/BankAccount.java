@@ -19,7 +19,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Document(value = "bankAccount")
+@Document( collection =  "bankAccount")
 public class BankAccount {
 
 	@Id

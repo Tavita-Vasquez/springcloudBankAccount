@@ -33,7 +33,7 @@ public class BankAccountService {
 		//return template.save(availableBalance);
 		log.info("Begin service save of bank Account.");
 		Mono<BankAccount> saved = null;
-		
+		bankAccount.setAmountMinCreation(0.00);
 		try {
 			if (bankAccount.getMaxTransaction()!=null) {
 				bankAccount.setAmountCommission(9999.99);

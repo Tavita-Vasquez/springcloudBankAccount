@@ -26,7 +26,7 @@ public class BankAccount {
 	private String idCreditType; //y créditos (personal, empresarial, tarjetas de crédito y adelanto de efectivo).
 	private String idClienType; //Empresarial o Personal	
 	private double amountCommission = 00.00; // 0 comisión
-	private double amountMinCreation = 00.00;
+	private double amountMinCreation;
 	private String idPaymentCredit;
 	private Integer maxTransaction;
 	private String  idBankAccount;

@@ -1,5 +1,6 @@
 package com.springcloud.ws.rest.mongodb.bankAccount.model;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -31,7 +32,16 @@ public class BankAccount {
 	private Integer maxTransaction;
 	private String  idBankAccount;
 	
-	
+	  
+	private String acctype; // tipo de cuenta bancaria ... ahorro, cuentas corrientes, o cuentas a plazo fijo)
+	private List<String> headline; // titular Las cuentas bancarias pueden tener uno o más titulares
+	private List<String> authorizedsigner; // y cero o más firmantes autorizados.
+	private Double availablebalance; //saldo disponible.
+	private Double balancetotal;
+	private String acctypedesc;
+	private LocalDate dateaccount;
+	private String bankId; // codigo del banco al que realizará el pago de credito
+	private String titular;	
 	
 	
 	public BankAccount() {
@@ -134,6 +144,114 @@ public class BankAccount {
 	}
 	public void setIdBankAccount(String idBankAccount) {
 		this.idBankAccount = idBankAccount;
+	}
+
+
+
+	public String getAcctype() {
+		return acctype;
+	}
+
+
+
+	public void setAcctype(String acctype) {
+		this.acctype = acctype;
+	}
+
+
+
+	public List<String> getHeadline() {
+		return headline;
+	}
+
+
+
+	public void setHeadline(List<String> headline) {
+		this.headline = headline;
+	}
+
+
+
+	public List<String> getAuthorizedsigner() {
+		return authorizedsigner;
+	}
+
+
+
+	public void setAuthorizedsigner(List<String> authorizedsigner) {
+		this.authorizedsigner = authorizedsigner;
+	}
+
+
+
+	public Double getAvailablebalance() {
+		return availablebalance;
+	}
+
+
+
+	public void setAvailablebalance(Double availablebalance) {
+		this.availablebalance = availablebalance;
+	}
+
+
+
+	public Double getBalancetotal() {
+		return balancetotal;
+	}
+
+
+
+	public void setBalancetotal(Double balancetotal) {
+		this.balancetotal = balancetotal;
+	}
+
+
+
+	public String getAcctypedesc() {
+		return acctypedesc;
+	}
+
+
+
+	public void setAcctypedesc(String acctypedesc) {
+		this.acctypedesc = acctypedesc;
+	}
+
+
+
+	public LocalDate getDateaccount() {
+		return dateaccount;
+	}
+
+
+
+	public void setDateaccount(LocalDate dateaccount) {
+		this.dateaccount = dateaccount;
+	}
+
+
+
+	public String getBankId() {
+		return bankId;
+	}
+
+
+
+	public void setBankId(String bankId) {
+		this.bankId = bankId;
+	}
+
+
+
+	public String getTitular() {
+		return titular;
+	}
+
+
+
+	public void setTitular(String titular) {
+		this.titular = titular;
 	}
 
 
